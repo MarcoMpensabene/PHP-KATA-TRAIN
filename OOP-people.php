@@ -28,7 +28,7 @@ class Person
     // Define a method called describe_job
     public function describe_job()
     {
-        return "I am currently working as a(n) " . $this->occupation;
+        return "I am currently working as " . $this->occupation;
     }
 
     // Define a static method called greet_extraterrestrials
