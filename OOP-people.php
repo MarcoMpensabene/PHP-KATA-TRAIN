@@ -1,17 +1,17 @@
 <?php
 
-// Define a class called Person
+// Definisci una classe persona
 class Person
 {
-    // Define a class constant for the species
-    const SPECIES = "Homo Sapiens"; // Constant is in uppercase
+    // Definisci una variable d'ambiente costante per le specie
+    const SPECIES = "Homo Sapiens";
 
-    // Declare the 3 public class properties: $name, $age, and $occupation
+    //dichiare le altre variabili pubbliche
     public $name;
     public $age;
     public $occupation;
 
-    // Define the class constructor
+    // definisci il costruttore 
     public function __construct($name, $age, $occupation)
     {
         $this->name = $name;
@@ -19,38 +19,38 @@ class Person
         $this->occupation = $occupation;
     }
 
-    // Define a method called introduce
+    // definisci un metodo introduce 
     public function introduce()
     {
         return "Hello, my name is " . $this->name;
     }
 
-    // Define a method called describe_job
+    // definisci un metodo describe_job
     public function describe_job()
     {
         return "I am currently working as " . $this->occupation;
     }
 
-    // Define a static method called greet_extraterrestrials
+    // definisci un metodo statico greet_extraterrestrials
     public static function greet_extraterrestrials($species)
     {
         return "Welcome to Planet Earth " . $species . "!";
     }
 }
 
-// Example usage of the Person class:
+// Esempi classe persona:
 
-// Create a new instance of the Person class
+// Nuova istanza della classe persona
 $person = new Person("Marco", 27, "Developer");
 
-// Call the introduce method and print the result
+// chiama il metodo instroduce() e stampa il risultato
 echo $person->introduce() . "\n";
 
-// Call the describe_job method and print the result
+// chiama il metodo describe_job() e stampa il risultato
 echo $person->describe_job() . "\n"; // 
 
-// Call the static greet_extraterrestrials method and print the result
+// chiama il metodo greet_extraterrestrials("Martians") e stampa il risultato
 echo Person::greet_extraterrestrials("Martians") . "\n"; // 
 
-// Access the class constant
+// Accedi alla classe const SPECIES e stampa .
 echo "Species: " . Person::SPECIES . "\n"; // 
